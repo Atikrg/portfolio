@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "atikrangnekar",
+  "license": "ISC",
+  "dependencies": {
+    "@flaticon/flaticon-uicons": "^1.7.0",
+    "bootstrap": "^5.2.2",
+    "core-js": "^3.26.1",
+    "fontawesome": "^5.6.3",
+    "parcel": "^2.8.0"
+  }
+}
