@@ -29,9 +29,11 @@ nav, .container-fluid{
 }
 .home {
   background-color: #cff5e7;
-  height: 100vh ;
+  height: 100vh auto ;
   width: 100%;
   overflow: hidden;
+
+  margin-bottom: auto;
 }
 
 .container {
@@ -142,4 +144,11 @@ nav, .container-fluid{
   }
  
 }
+
+.recent-projects{
+  margin-top: 150px;
+  padding-left: 24px;
+  font-weight: 800;
+  margin-left: 35%;
+};
 
