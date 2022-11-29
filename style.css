@@ -26,7 +26,7 @@
 }
 .home {
   background-color: #cff5e7;
-  height: 100vh auto ;
+  height: 91vh;
   width: 100%;
   overflow: hidden;
 
@@ -92,6 +92,12 @@
   flex-direction: row;
 }
 
+.navbar-icon-scroll{
+
+  overflow: hidden;
+}
+
+
 .about__me {
   font-size: medium;
   margin-top: 28px;
@@ -114,6 +120,8 @@
   border: none;
 }
 
+
+
 .social__links li a img {
   height: 24px;
   width: 24px;
@@ -129,11 +137,23 @@
     display: none;
   }
 
+  .nm-1, .nm-2{
+    font-size: 35px;
+  }
+
   .nav-item:hover{
     background-color: #0d4c92;
     border-radius: 8px;
   }
 
+  .nav-item{
+    padding: 4px;
+  }
+  .nav-item a{
+    margin: 4px;
+  }
+
+  
   .nav-item a:hover{
     color: azure;
   }
@@ -155,9 +175,11 @@
   background-color: #cff5e7;
   overflow: hidden;
 }
-
+.projects-section{
+overflow: hidden;
+background-color: #cff5e7;
+}
 .recent-projects{
-  background-color: #cff5e7;
   font-weight: 800;
   margin-left: 35%;
   width: 310px;
@@ -165,12 +187,15 @@
   margin-top: 23px;
 }
 
-.content-projects{
+
+ /*  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin: 14px;
   margin-top: 45px;
   background-color: #cff5e7;
+ */
 
-}
 
 .content-title{
   font-size: 24px;
@@ -178,17 +203,54 @@
   margin: 13px;
 }
 .content-description{
-  width: 55%;
+  width: 300px;
   word-break: break-all;
   margin-left: 1.4em;
 }
 .content-year{
-  opacity: 50%;
   margin-left: 1.4em;
   margin-bottom: 4px;
+  font-weight: 500px;
+  
 }
 
+
 .view-project{
-  color: #0d4c92;
+  color:aquamarine;
   cursor: pointer;
 } 
+.project-img{
+  height: 200px;
+  width: 200px;
+}
+
+
+
+.project-title{
+  font-size: 24px;
+}
+
+
+.project-image{
+  margin-top: 20px;
+  height: auto;
+  width: 300px;
+  object-fit: cover;
+  margin-left: 10% auto;
+  max-width: 100%;
+  
+}
+
+
+@media (max-width:558px){
+  .nm-1, .nm-2{
+font-size: 30px;
+margin-left: 14px;
+  }
+}
+
+@media (max-width:400px){
+  .nm-1, .nm-2{
+font-size: 25px;
+  }
+}
