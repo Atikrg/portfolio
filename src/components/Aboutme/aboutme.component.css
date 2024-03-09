@@ -1,0 +1,54 @@
+.aboutme-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-family: Cairo;
+    margin-top: 44px;
+    margin-bottom: 44px;
+}
+
+.clip-image{ 
+    background-image: url("../../assests/images/im3.png");
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 600px;
+    
+}
+
+.aboutme-content{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0px 245px 0px 245px; 
+}
+
+.writeUp{
+    margin-top: 134px;
+    width:945px;
+    font-size: 24px;
+    justify-content: center;
+}
+
+@media (max-width: 576px){
+    .clip-image{
+        background-image: url("../../assests/images/im4.png");
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+    }
+    .aboutme-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .writeUp{
+        width: 500px;
+        margin-top: 22px;
+        margin-left: 24px;
+        padding: 6px;
+    }
+}

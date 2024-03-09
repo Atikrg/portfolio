@@ -1,0 +1,52 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.brand-container{
+    background-color: black;
+    height:85vh;
+    width: 100%;
+    overflow: hidden;
+  
+}
+
+.mywork{
+    color: purple;
+}
+
+.content-info{
+    margin-top: 17%;
+}
+
+.brand-text{
+    font-family: "Madimi One", sans-serif;
+    font-size: 100px;
+    color: white;
+    
+}
+
+.speciality{
+    font-family: "Madimi One", sans-serif;
+    text-align: center;
+}
+ 
+
+
+@media (max-width: 576px) { 
+    .brand-container{
+        height: 60vh;
+       
+    }
+    .brand{
+      font-size: 40px;
+    }
+
+    .brand_name{
+        margin-top: 35%;
+    }
+
+    
+
+    
+ } 

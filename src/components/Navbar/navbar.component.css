@@ -1,0 +1,141 @@
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+ 
+}
+
+.nav-link{
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+  padding:4px; 
+}
+
+.button-close{
+  display: none;
+}
+
+
+.brand-logo{
+  font-size: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-link{
+  list-style: none;
+  text-transform: uppercase;
+  margin: 12px;
+  
+}
+
+.navbar-list{
+  display: flex;
+  width:100;
+  
+}
+
+.mobile-navbar-btn {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+.mobile-nav-icon {
+  width: 4rem;
+  height: 4rem;
+  color: #212529;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+  display: none;
+}
+
+/*
+.nav-link:hover, .active{
+  border-color: black;
+  border: 1px solid black;
+ 
+}
+*/
+
+/*Responsive-website*/
+@media (max-width: 650px){
+  header{
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: column;
+  }
+
+  .navbar{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .open{
+    .navbar-list{
+      display: block;
+    }
+  }
+
+  .close{
+    .navbar-list{
+      display: none;
+    }
+   
+  }
+
+  .button-close{
+    display: block;
+    background-color: black;
+    color: white;
+    margin-top: 14px;
+    padding: 2px;
+    font-size: 34px;
+    width: 44px;
+    border-radius: 4px;
+    margin-left: 356px;
+    cursor: pointer;
+  }
+
+  .icons{
+    text-align: left;
+    float: right;
+    
+  }
+
+
+  .icon{
+    height: 45px;
+    width: 45px;
+  }
+
+  
+
+  .nav-link{
+    color: black;
+ 
+    ;
+    
+  }
+
+  .navbar-list{
+    display: none;
+    color: black;}
+
+
+
+  .navbar{
+    background-color: white;
+    width: 100%;
+  }
+  .navbar-list{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+   .navbar-link{
+    margin-top: 34px;
+   }
+}

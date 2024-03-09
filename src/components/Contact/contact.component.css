@@ -1,0 +1,43 @@
+.contactComponent{
+    height: 50vh;
+    margin-top: 4%;
+}
+.contact-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-family: Cairo;
+    margin-top: 44px;
+    margin-bottom: 44px;
+}
+
+.contact-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputArea{
+    margin-top: 10px;
+}
+
+.input_email{
+    width: 273px;
+    margin-left: 35px;
+    padding: 12px;
+}
+
+.input_text{
+    height: 200px;
+    width: 350px;
+    padding: 12px;
+    justify-content: center;
+}
+.contact-button1{
+    
+    padding: 6px;
+    font-size: large;
+    text-transform: capitalize;
+   
+}
