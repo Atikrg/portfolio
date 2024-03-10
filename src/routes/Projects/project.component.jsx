@@ -2,12 +2,12 @@ import React from "react";
 import data from "../../assests/data";
 import "./project.component.css";
 import ProjectCard from "../../components/ProjectCard/projectCard.component";
-import { CardPreview, ProjectHeader } from "../../components/ProjectCardPreview/project-card-preview.styles";
+import { CardPreview, Header } from "../../components/ProjectCardPreview/project-card-preview.styles";
 const Project = (props) => {
   return (
   
   <div>
-    <ProjectHeader>Projects</ProjectHeader>
+    <Header>Projects</Header>
     <div>
     <CardPreview> 
        {

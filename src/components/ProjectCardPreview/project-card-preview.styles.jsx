@@ -9,7 +9,7 @@ export const CardPreview = styled.div`
 
 `
 
-export const ProjectHeader = styled.div`
+export const Header = styled.div`
     font-size: 34px;
     display: flex;
     justify-content: center;

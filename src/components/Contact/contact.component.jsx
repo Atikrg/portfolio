@@ -1,30 +1,47 @@
-import "./contact.component.css"
-import React, { useEffect, useState } from 'react'
+import { Header } from "../ProjectCardPreview/project-card-preview.styles";
+import React, { useEffect, useState } from "react";
+import {
+  ContactComponent,
+  ContactContent,
+  ContactButton,
+  InputEmail,
+  InputArea,
+  InputText,
+} from "./contact.styles";
 
-const Contact = ()=>{
+const Contact = () => {
+  const [message, setMessage] = useState("");
+  return (
+    <ContactComponent>
+      <Header>Contact me</Header>
 
-  const [message, setMessage] = useState('');
- return(
-  <div className="contactComponent" id="#contactme">
-    <div className="contact-header">
-      <p>Contact me</p>
-    </div>
+      <ContactContent>
+        <form>
+          <InputEmail
+            className="input_email"
+            type="email"
+            placeholder="Enter email address"
+            required
+          />
 
-    <div className="contact-footer">
-      <form>
-        <div className="inputEmail">
-          <input className="input_email" type="email" placeholder="Enter email address" required/>
-        </div>
-        <div className="inputArea">
-          <textarea className="input_text" onChange={(event)=> setMessage(event.target.value)} type = "textarea" placeholder="Enter text" required/>
-        </div>
-        <div className="contact-button">
-          <input className="contact-button1" type="button" value="submit"/>
-        </div>
-      </form>
-    </div>
-  </div>
- )
-}
+          <InputArea>
+            <InputText
+              className="input_text"
+              onChange={(event) => setMessage(event.target.value)}
+              type="textarea"
+              placeholder="Enter text"
+              required
+            />
+          </InputArea>
+          <ContactButton
+            className="contact-button1"
+            type="button"
+            value="submit"
+          />
+        </form>
+      </ContactContent>
+    </ContactComponent>
+  );
+};
 
 export default Contact;

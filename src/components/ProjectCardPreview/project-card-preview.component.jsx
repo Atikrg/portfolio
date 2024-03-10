@@ -1,7 +1,7 @@
 import ProjectCard from '../../components/ProjectCard/projectCard.component'
 import React from 'react'
 import data from '../../assests/data';
-import {CardPreview, ProjectLink, ProjectHeader} from './project-card-preview.styles.jsx'
+import {CardPreview, ProjectLink, Header} from './project-card-preview.styles.jsx'
 
 const ProjectPreview = () => {
 
@@ -14,9 +14,9 @@ const ProjectPreview = () => {
 
   return (
     <div className='project-preview'>
-      <ProjectHeader>
+      <Header>
         Projects
-      </ProjectHeader>
+      </Header>
 
       <CardPreview> 
        {
