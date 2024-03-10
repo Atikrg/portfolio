@@ -1,9 +1,7 @@
 import ProjectCard from '../../components/ProjectCard/projectCard.component'
 import React from 'react'
-import card from "../../assests/images/projectcard/im2.jpg";
-import { Link } from 'react-router-dom';
 import data from '../../assests/data';
-import {CardPreview, ProjectLink} from './project-card-preview.styles.jsx'
+import {CardPreview, ProjectLink, ProjectHeader} from './project-card-preview.styles.jsx'
 
 const ProjectPreview = () => {
 
@@ -16,9 +14,9 @@ const ProjectPreview = () => {
 
   return (
     <div className='project-preview'>
-      <div className="project-header">
-        <p>Projects</p>
-      </div>
+      <ProjectHeader>
+        Projects
+      </ProjectHeader>
 
       <CardPreview> 
        {
@@ -27,11 +25,11 @@ const ProjectPreview = () => {
       </CardPreview>
       <br/>
       <br></br>
-      <div>
-        <ProjectLink className='view_more_projects' to="projects" onClick={scrollToTop}>
+      
+        <ProjectLink to="projects" onClick={scrollToTop}>
           View More
           </ProjectLink>
-      </div>
+      
   
     </div>
   )
