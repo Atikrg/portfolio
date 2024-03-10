@@ -1,83 +1,64 @@
 import React from 'react';
 import "./experience.component.css"
-const Experience = (props) => {
-    return (
-        <>
-            <center>
-                <h1 className='project-header'>Experience</h1>
-            </center>
-            <div class="main-container">
-  <section id="timeline" class="timeline-outer">
-    <div class="container" id="content">
-      <div class="row">
-        <div class="col s12 m12 l12">
-          <ul class="timeline">
-            <li class="event" data-date="2015/Present">
-              <h3>Management and Entreprenurship (MSc)</h3>
-              <p>
-                This September 2015 I will begin an MSc in Management and Entrepreneurship at University of Sussex, to broaden my knowledge and gain skills necessary for my future in business and management.
-              </p>
-            </li>
-            <li class="event" data-date="2015/Present">
-              <h3>Claromentis</h3>
-              <p>
-                Claromentis is an intranet software provider company. I started working at the Brighton office as a Marketing Designer while I was still attending my final year at the University of Sussex. My primary responsibilities included creating corporate identity
-                for the company; I re-designed their website, and have created marketing materials such as brochures.
-              </p>
-              <p>Since graduating from university, I have also undertaken responsibilities for designing a product for the company. The roles I have been given have provided the perfect opportunity to implement the skills I have gained throughout my higher
-                education, as well as experiencing the running of a successful business.</p>
-            </li>
-            <li class="event" data-date="2012/2015">
-              <h3>Games & Multimedia Environments BSc (Hons)</h3>
-              <p>Throughout my degree I have gained expansive knowledge of informatics areas including Human Computer Interaction, Multimedia Design and Development, Program Analysis and Design For my final year project, I created a 2D Puzzler Game for iOS
-                called 'Flat Ball' and received a first. I therefore hope to release this game and further develop it to add new levels and improve the features.
-              </p>
-            </li>
-            <li class="event" data-date="2012/2015">
-              <h3>1108 Studios</h3>
-              <p>This is a small startup that a friend and I created to gain more skills and apply those I had learned while completing my diploma. Since its inception, as a front - end web developer I have advised, designed and built web solutions for numerous
-                clients.</p>
-            </li>
-            <li class="event" data-date="2010/2012">
-              <h3>IT Practitioners BTEC National Diploma</h3>
-              <p>This is where my interest in building things for interactive media began. During my first computing course I studied a range of core topics including multimedia design, database design, computer games development, computer networks and object
-                oriented programming.</p>
-            </li>
-            <li class="event" data-date="2010/2012">
-              <h3>IT Practitioners BTEC National Diploma</h3>
-              <p>This is where my interest in building things for interactive media began. During my first computing course I studied a range of core topics including multimedia design, database design, computer games development, computer networks and object
-                oriented programming.</p>
-            </li>
-            <li class="event" data-date="2010/2012">
-              <h3>IT Practitioners BTEC National Diploma</h3>
-              <p>This is where my interest in building things for interactive media began. During my first computing course I studied a range of core topics including multimedia design, database design, computer games development, computer networks and object
-                oriented programming.</p>
-            </li>
-            <li class="event" data-date="2010/2012">
-              <h3>IT Practitioners BTEC National Diploma</h3>
-              <p>This is where my interest in building things for interactive media began. During my first computing course I studied a range of core topics including multimedia design, database design, computer games development, computer networks and object
-                oriented programming.</p>
-            </li>
-            <li class="event" data-date="2010/2012">
-              <h3>IT Practitioners BTEC National Diploma</h3>
-              <p>This is where my interest in building things for interactive media began. During my first computing course I studied a range of core topics including multimedia design, database design, computer games development, computer networks and object
-                oriented programming.</p>
-            </li>
-            <li class="event" data-date="2010/2012">
-              <h3>IT Practitioners BTEC National Diploma</h3>
-              <p>This is where my interest in building things for interactive media began. During my first computing course I studied a range of core topics including multimedia design, database design, computer games development, computer networks and object
-                oriented programming.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
 
-  <br/>
-</div>
-        </>
-    );
-};
-
-export default Experience;
+export default function Experience() {
+  return (
+    <>  
+    <center className='experience-header'>Experience</center>
+    <section className="py-5">
+      <ul className="timeline">
+        <li className="timeline-item mb-5">
+          <h5 className="fw-bold">Our company starts its operations</h5>
+          <p className="text-muted mb-2 fw-bold">11 March 2020</p>
+          <p className="text-muted">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+            necessitatibus adipisci, ad alias, voluptate pariatur officia
+            repellendus repellat inventore fugit perferendis totam dolor
+            voluptas et corrupti distinctio maxime corporis optio?
+          </p>
+        </li>
+    
+        <li className="timeline-item mb-5">
+          <h5 className="fw-bold">First customer</h5>
+          <p className="text-muted mb-2 fw-bold">19 March 2020</p>
+          <p className="text-muted">
+            Quisque ornare dui nibh, sagittis egestas nisi luctus nec. Sed
+            aliquet laoreet sapien, eget pulvinar lectus maximus vel.
+            Phasellus suscipit porta mattis.
+          </p>
+        </li>
+    
+        <li className="timeline-item mb-5">
+          <h5 className="fw-bold">Our team exceeds 10 people</h5>
+          <p className="text-muted mb-2 fw-bold">24 June 2020</p>
+          <p className="text-muted">
+            Orci varius natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Nulla ullamcorper arcu lacus, maximus
+            facilisis erat pellentesque nec. Duis et dui maximus dui aliquam
+            convallis. Quisque consectetur purus erat, et ullamcorper sapien
+            tincidunt vitae.
+          </p>
+        </li>
+    
+        <li className="timeline-item mb-5">
+          <h5 className="fw-bold">Earned the first million $!</h5>
+          <p className="text-muted mb-2 fw-bold">15 October 2020</p>
+          <p className="text-muted">
+            Nulla ac tellus convallis, pulvinar nulla ac, fermentum diam. Sed
+            et urna sit amet massa dapibus tristique non finibus ligula. Nam
+            pharetra libero nibh, id feugiat tortor rhoncus vitae. Ut suscipit
+            vulputate mattis.
+          </p>
+        </li>
+      </ul>
+    </section>
+    </>
+    
+  );
+}

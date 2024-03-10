@@ -1,9 +1,10 @@
 import ProjectCard from '../../components/ProjectCard/projectCard.component'
-import './project-card-preview.component.css'
 import React from 'react'
 import card from "../../assests/images/projectcard/im2.jpg";
 import { Link } from 'react-router-dom';
 import data from '../../assests/data';
+import {CardPreview, ProjectLink} from './project-card-preview.styles.jsx'
+
 const ProjectPreview = () => {
 
   const scrollToTop = () => {
@@ -19,19 +20,17 @@ const ProjectPreview = () => {
         <p>Projects</p>
       </div>
 
-      <div className='card-preview'> 
+      <CardPreview> 
        {
-        data.slice(0, 6).map((item, index)=><ProjectCard key = {item.id} title={item.title} description={item.description.slice(0,90) + "..."} imageUrl= {item.imageUrl}/>)
+        data.slice(0, 6).reverse().map((item, index)=><ProjectCard key = {item.id} title={item.title} description={item.description.slice(0,90) + "..."} imageUrl= {item.imageUrl}/>)
         }       
-      </div>
+      </CardPreview>
       <br/>
       <br></br>
       <div>
-        <Link className='view_more_projects' to="projects" onClick={scrollToTop}>
-         
+        <ProjectLink className='view_more_projects' to="projects" onClick={scrollToTop}>
           View More
-          
-          </Link>
+          </ProjectLink>
       </div>
   
     </div>

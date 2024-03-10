@@ -1,10 +1,16 @@
 import card from "../assests/images/projectcard/im2.jpg"
 
 const data = [
+  {
+    id:0,
+    title: "Machine Learning",
+    description: "my name is atik i am a good boy i am studying finolex academy of management and technology i am currently in my sem2. i like playing football and basketball.my name is atik i am a good boy i am studying finolex academy of management and technology i am currently in my sem2. i like playing football and basketball",
+    imageUrl: card
   
+  },
     {
       id:1,
-      title: "Title",
+      title: "Machine Learning",
       description: "my name is atik i am a good boy i am studying finolex academy of management and technology i am currently in my sem2. i like playing football and basketball.my name is atik i am a good boy i am studying finolex academy of management and technology i am currently in my sem2. i like playing football and basketball",
       imageUrl: card
     
@@ -46,7 +52,7 @@ const data = [
       },
       {
         id:7,
-        title: "Title",
+        title: "javascript",
         description: "famt is a college. studying computer application in that college",
         imageUrl: card
       

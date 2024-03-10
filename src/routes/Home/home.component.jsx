@@ -14,8 +14,8 @@ const Home = () => {
     <div>
       <Navbar/>
         <InfoWork/>
-      <Experience/>
         <Aboutme/>
+      <Experience/>
         <ProjectPreview/>
         <Contact/>
        

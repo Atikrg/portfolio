@@ -1,43 +1,39 @@
-import "./projectCard.component.css"
-import React from 'react'
-import { Link } from "react-router-dom"
-import card from "../../assests/images/projectcard/im2.jpg";
-const ProjectCard = ({title, description, imageUrl}) => {
-  return (
-    <div className="project-components">
+import React from "react";
+
+import {
+  CardImage,
+  SpecificTitle,
+  Content,
+  ProjectDescription,
+  DataSource,
+  Source,
+  ProjectComponents,
   
-  <br/>
-      <div className="project-card">
-      <img className="card-image"
-        src={imageUrl}
-        alt="Description of the image"
-      />
+} from "./projectCard.styles";
 
-      </div>
-      <div className="specific-title">
-          <p>Specific title</p>
-      </div>
-      <div className="content">
-        <div>
-          <p className="card-title">
-            {title}
-            </p>
-        </div>
-        <div>
-          <p className="description">
-            {description}
-            </p>
-        </div>
+const ProjectCard = ({ title, description, imageUrl }) => {
+  return (
+    <ProjectComponents>
+      <br />
 
-        <div className="dateSource">
-            <p>December 2022</p>
-            
-            <p className="source"><span>•</span> Source</p>
-          
-        </div>
-      </div>
-    </div>
-  )
-}
+      <CardImage src={imageUrl} alt="Description of the image" />
+
+      <SpecificTitle>
+        <p>Specific title</p>
+      </SpecificTitle>
+
+      <Content>{title}</Content>
+
+      <ProjectDescription>{description}</ProjectDescription>
+
+      <DataSource>
+        December 2022
+        <Source>
+          • Source
+        </Source>
+      </DataSource>
+    </ProjectComponents>
+  );
+};
 
 export default ProjectCard;

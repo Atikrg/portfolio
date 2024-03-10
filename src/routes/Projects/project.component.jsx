@@ -10,7 +10,7 @@ const Project = (props) => {
     <div>
     <div className='card-preview'> 
        {
-        data.map((item, index)=><ProjectCard key = {item.id} title={item.title} description={item.description.slice(0,90) + "..."} imageUrl= {item.imageUrl}/>)
+        data.slice(0).reverse().map((item, index)=><ProjectCard key = {item.id} title={item.title} description={item.description.slice(0,90) + "..."} imageUrl= {item.imageUrl}/>)
         }       
       </div>
     </div>
