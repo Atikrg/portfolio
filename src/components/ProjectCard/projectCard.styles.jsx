@@ -12,19 +12,16 @@ export const CardImage = styled.img`
 
 export const SpecificTitle = styled.div`
     opacity: 65%;
-    margin: 22px 12px;
     font-weight: 500;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
 `
 
-export const Content = styled.div`
-    margin-left: 25px;
+export const Title = styled.div`
     font-weight: 900;
     font-size: 28px;
     font-family: var(--cairosa)
-
- `
+`
 
 export const ProjectDescription = styled.div`
     font-size: 16px;
@@ -52,8 +49,9 @@ export const Source = styled(Link)`
      }
 `
 
+
 export const ProjectComponents = styled.div`
-    margin: 24px;
+    margin: 14px;
     width: 392px;
     padding: 0;
     

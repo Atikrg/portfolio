@@ -3,7 +3,7 @@ import React from "react";
 import {
   CardImage,
   SpecificTitle,
-  Content,
+  Title,
   ProjectDescription,
   DataSource,
   Source,
@@ -22,14 +22,15 @@ const ProjectCard = ({ title, description, imageUrl }) => {
         <p>Specific title</p>
       </SpecificTitle>
 
-      <Content>{title}</Content>
+      <Title>{title}</Title>
 
       <ProjectDescription>{description}</ProjectDescription>
 
       <DataSource>
         December 2022
+        
         <Source>
-          • Source
+        <span> •</span> Source
         </Source>
       </DataSource>
     </ProjectComponents>

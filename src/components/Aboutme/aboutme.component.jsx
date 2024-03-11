@@ -1,11 +1,12 @@
-import React, {useRef} from 'react'
+import React from 'react'
 import "./aboutme.component.css"
+import { Header } from '../ProjectCardPreview/project-card-preview.styles';
 
 const Aboutme = () => {
-  const ref = useRef(null);
+  
   return (
     <div className= "container">
-        <center className='aboutme-header'>Aboutme</center>
+        <Header>Aboutme</Header>
         <div className='aboutme-content'>
             <div className='clip-image'></div>
             <div className='writeUp '>
