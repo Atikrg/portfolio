@@ -7,6 +7,11 @@ import styled from "styled-components";
 export const CardImage = styled.img`
     height: 200px;
     width: 390px;
+    transition: transform 0.3s ease-in-out;
+    &:hover{
+        transform: scale(1.2)
+    }
+
 
 `
 

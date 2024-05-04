@@ -6,6 +6,7 @@ export const CardPreview = styled.div`
     align-item: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin:12px;
 
 `
 

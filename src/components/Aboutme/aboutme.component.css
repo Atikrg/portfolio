@@ -1,71 +1,67 @@
-.aboutme-header{
-    font-size: 34px;
-    font-family: Cairo;
-    margin-top: 44px;
-    margin-bottom: 44px;
+.aboutme-header {
+  font-size: 34px;
+  font-family: Cairo;
+  margin-top: 44px;
+  margin-bottom: 44px;
 }
 
-.clip-image{ 
-    background-image: url("../../assests/images/im3.png");
-    background-repeat: no-repeat;
-    height: 600px;
-    width: 1095px;
-    position: relative;
-    
+.clip-image {
+  background-image: url("../../assests/images/im3.png");
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 1095px;
+  position: relative;
 }
 
-.aboutme-content{
+.aboutme-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0px 245px 0px 245px;
+}
+
+.writeUp {
+  margin-top: 114px;
+  padding: 10px;
+
+  font-size: 24px;
+}
+
+@media (max-width: 576px) {
+  .clip-image {
+    background-image: url("../../assests/images/im4.png");
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+  }
+  .aboutme-content {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin: 0px 245px 0px 245px; 
-}
-
-.writeUp{
-    margin-top: 114px;
-    padding: 10px;
-   
-    font-size: 24px;
- 
-}
-
-@media (max-width: 576px){
-    .clip-image{
-        background-image: url("../../assests/images/im4.png");
-        height: 300px;
-        width: 300px;
-        border-radius: 50%;
-    }
-    .aboutme-content{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
- 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 1243px) {
-    .clip-image{
-        background-image: url("../../assests/images/im4.png");
-        height: 300px;
-        width: 300px;
-        border-radius: 50%;
-    }
-    .aboutme-content{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+  .clip-image {
+    background-image: url("../../assests/images/im4.png");
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+  }
+  .aboutme-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-    .writeUp{
-        width: 440px;
-        font-size: 20px;
-        text-align: justify;
-        margin-top: 22px;
-        padding: 6px;
-    }
+  .writeUp {
+    width: 440px;
+    font-size: 20px;
+    text-align: justify;
+    margin-top: 22px;
+    padding: 6px;
+  }
 }

@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar/>
+  
         <InfoWork/>
         <Aboutme/>
       <Experience/>
