@@ -1,0 +1,49 @@
+.copy-right{
+    margin-top: 12px;
+    font-size: 16px;
+}
+footer{
+    background-color: #0062D3;
+    color:white;
+    text-decoration: none;
+  
+}
+
+
+.rights{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.email-info, .phone-info, .location-info{
+    color: yellow;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+
+}
+
+.details{
+    font-size:30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    word-spacing: 1px;
+}
+
+.details, .email-link, .phone-link, .location{
+    color: white;
+    margin-left: 12px;
+}
+
+
+.further-info{
+    line-height: -24px;
+    position: relative;
+    margin-top: 1232px;
+    font-size: 16px;
+    color: yellow;
+    padding-left:12px;
+    margin-top: 12px;
+}

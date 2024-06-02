@@ -9,12 +9,11 @@ import Project from './routes/Projects/project.component';
 
 function App() {
   return (
- 
-    <Routes>
+
+   <Routes>
       <Route index element={<Home/>} />
       <Route path="projects" element={<Project/>} />
-    </Routes>
-  
+    </Routes> 
   );
 }
 

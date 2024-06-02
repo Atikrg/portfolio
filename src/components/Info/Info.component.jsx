@@ -61,12 +61,12 @@ const InfoWork = (props) => {
       <div className="content-info">
         <div className="brand_name">
           <h1 className="brand brand-text text-center text-white" ref={myName}>
-            Atik Salim Rangnekar
+            Atik S Rangnekar
           </h1>
         </div>
         <div className="speciality sub_info text-white">
           <h1 ref={mySpeciality}>Full Stack Developer and Machine Learner</h1>
-          <h3 className="mywork" ref={myCurrentWork}>FreeLancer</h3>
+          <h3 className="mywork" ref={myCurrentWork}>Software Developer</h3>
         </div>
       </div>
     </div>

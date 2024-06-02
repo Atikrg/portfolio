@@ -32,3 +32,12 @@ export const ContactButton = styled.input`
   font-size: large;
   text-transform: capitalize;
 `;
+
+
+export const SocialContact = styled.div`
+display: flex;
+flex-direction: row;
+gap:35px;
+color:black;
+
+`;

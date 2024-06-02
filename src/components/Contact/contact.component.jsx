@@ -1,5 +1,6 @@
 import { Header } from "../ProjectCardPreview/project-card-preview.styles";
 import React, { useEffect, useState } from "react";
+
 import {
   ContactComponent,
   ContactContent,
@@ -7,7 +8,9 @@ import {
   InputEmail,
   InputArea,
   InputText,
+  SocialContact,
 } from "./contact.styles";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [message, setMessage] = useState("");
@@ -39,7 +42,12 @@ const Contact = () => {
             value="submit"
           />
         </form>
+
+
+
+
       </ContactContent>
+
     </ContactComponent>
   );
 };
