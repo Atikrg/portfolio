@@ -1,64 +1,78 @@
-import React from 'react';
-import "./experience.component.css"
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
+import React from "react";
+import moment from "moment";
+import "./experience.component.css";
+import { supabase } from "../../config/supabase_client";
+import { Header } from "../ProjectCardPreview/project-card-preview.styles";
+import { useState, useEffect } from "react";
 
 export default function Experience() {
-  return (
-    <>  
-    <center className='experience-header'>Experience</center>
-    <section className="py-5">
-      <ul className="timeline">
-        <li className="timeline-item mb-5">
-          <h5 className="fw-bold">Our company starts its operations</h5>
-          <p className="text-muted mb-2 fw-bold">11 March 2020</p>
-          <p className="text-muted">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-            necessitatibus adipisci, ad alias, voluptate pariatur officia
-            repellendus repellat inventore fugit perferendis totam dolor
-            voluptas et corrupti distinctio maxime corporis optio?
-          </p>
-        </li>
-    
-        <li className="timeline-item mb-5">
-          <h5 className="fw-bold">First customer</h5>
-          <p className="text-muted mb-2 fw-bold">19 March 2020</p>
-          <p className="text-muted">
-            Quisque ornare dui nibh, sagittis egestas nisi luctus nec. Sed
-            aliquet laoreet sapien, eget pulvinar lectus maximus vel.
-            Phasellus suscipit porta mattis.
-          </p>
-        </li>
-    
-        <li className="timeline-item mb-5">
-          <h5 className="fw-bold">Our team exceeds 10 people</h5>
-          <p className="text-muted mb-2 fw-bold">24 June 2020</p>
-          <p className="text-muted">
-            Orci varius natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus. Nulla ullamcorper arcu lacus, maximus
-            facilisis erat pellentesque nec. Duis et dui maximus dui aliquam
-            convallis. Quisque consectetur purus erat, et ullamcorper sapien
-            tincidunt vitae.
-          </p>
-        </li>
-    
-        <li className="timeline-item mb-5">
-          <h5 className="fw-bold">Earned the first million $!</h5>
-          <p className="text-muted mb-2 fw-bold">15 October 2020</p>
-          <p className="text-muted">
-            Nulla ac tellus convallis, pulvinar nulla ac, fermentum diam. Sed
-            et urna sit amet massa dapibus tristique non finibus ligula. Nam
-            pharetra libero nibh, id feugiat tortor rhoncus vitae. Ut suscipit
-            vulputate mattis.
-          </p>
-        </li>
-      </ul>
-    </section>
-    </>
-    
-  );
+    const [experience, setExperienceInfo] = useState([]);
+
+    useEffect(() => {
+        const getExperience = async () => {
+            const { data, error } = await supabase.from("Experience").select();
+
+            if (error) {
+                console.log(error);
+            }
+
+            if (data) {
+                setExperienceInfo(data);
+            }
+        };
+        getExperience();
+    });
+
+    return (
+        <div className="experience_section">
+            <Header id="experiences">Experience</Header>
+            <section className="py-5">
+                <ul className="timeline">
+                {experience.length === 0 ? (
+    <p>No experience available</p>
+) : (
+    experience
+        .slice()
+        .reverse()
+        .map((item, index) => (
+            <li key={index} className="timeline-item mb-5">
+                <h5 className="fw-bold">{item.title}</h5>
+                <div
+                    style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center", // Ensures proper alignment
+                    }}
+                >
+                    <p className="text-muted mb-2 fw-bold">
+                        {moment(item.start_date).format("MMMM Do, YYYY")}
+                    </p>
+                    <p
+                        style={{
+                            marginLeft: "8px",
+                            marginRight: "8px",
+                        }}
+                    >
+                        -
+                    </p>
+                    <p className="text-muted mb-2 fw-bold">
+                        {moment(item.end_date).format("MMMM Do, YYYY")}
+                    </p>
+                </div>
+
+                <p>Position - {item.position}</p>
+                <p className="text-muted">{item.description}</p>
+                <p>
+                    <i>
+                        Skills - <span>{Array.isArray(item.skills) ? item.skills.join(', ') : item.skills}</span>
+                    </i>
+                </p>
+            </li>
+        ))
+)}
+
+                </ul>
+            </section>
+        </div>
+    );
 }

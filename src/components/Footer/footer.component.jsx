@@ -1,61 +1,97 @@
 import { Link } from "react-router-dom"; // Correct import for Link
 import "./footer.styles.scss";
 import React from "react"; // No need to destructure Link here
-
-import {
-  faInstagram,
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SocialContact } from "../Contact/contact.styles";
+import { supabase } from "../../config/supabase_client";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
-  return (
-    <footer className="footer">
-      <p className="details">Get In Touch</p>
-      <div className="further-info">
-        <div className="email-info">
-          <p>Email:</p>
-          <a className="email-link" href="mailto:atikrangnekar28@gmail.com">
-            atikrangnekar28@gmail.com
-          </a>
-        </div>
+    const [portfolioLinks, setPortfolioLinks] = useState({});
 
-        <div className="location-info">
-          <p>Location:</p>
-          <p className="location">Maharashtra, India</p>
-        </div>
+    useEffect(() => {
+        const getPortfolioLinks = async () => {
+            const { data, error } = await supabase.from("links").select();
 
-        <div className="phone-info">
-          <p>Phone:</p>
-          <a className="phone-link" href="tel:+917888187782">
-            +91 78881-87782
-          </a>
-        </div>
-        <SocialContact>
-          <Link style={{color:'black'}} to="https://www.instagram.com/root.codes/" target="_blank">
-            <FontAwesomeIcon icon={faInstagram} size="2x" />
-          </Link>
+            if (error) {
+                console.log(error);
+            }
 
-          <Link style={{color:'black'}} to="https://github.com/Atikrg" target="_blank">
-            <FontAwesomeIcon icon={faGithub} size="2x" />
-          </Link>
+            if (data) {
+                setPortfolioLinks(...data);
+            }
+        };
+        getPortfolioLinks();
+    });
+    return (
+        <footer className="footer">
 
-          <Link style={{color:'black'}} to="https://www.linkedin.com/in/atikrangnekar/" target="_blank">
-            <FontAwesomeIcon icon={faLinkedin} size="2x" />
-          </Link>
-        </SocialContact>
-      </div>
+            <p className="details">Get In Touch</p>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-5 further-info">
+                        <div className="email-info">
+                            <p className="font-size-24">Email:</p>
+                            <a
+                                className="email-link font-size-24"
+                                href="mailto:atikrangnekar28@gmail.com"
+                            >
+                                atikrangnekar28@gmail.com
+                            </a>
+                        </div>
 
-      <div className="rights">
-        <p className="copy-right">
-          © Copyright <b>Atik</b>. All Rights Reserved
-        </p>
-        <p className="design-by">Designed by Atik Salim Rangnekar</p> {/* Changed class to className */}
-      </div>
-    </footer>
-  );
+                        <div className="location-info">
+                            <p className="font-size-24">Location:</p>
+                            <p className="location font-size-24">
+                                Maharashtra, India
+                            </p>
+                        </div>
+
+                        <div className="phone-info">
+                            <p className="font-size-24">Phone:</p>
+                            <Link
+                                className="phone-link font-size-24"
+                                href="tel:+917888187782"
+                            >
+                                +91 78881-87782
+                            </Link>
+                        </div>
+
+                        <div className="social-contact-4">
+                            <Link
+                                className="btn btn-outline-light"
+                                to={portfolioLinks.instagram}
+                                target="_blank"
+                            >
+                                <i className="fab fa-instagram"></i>
+                            </Link>
+                            <Link
+                                className="btn btn-outline-light "
+                                style={{ marginLeft: "12px" }}
+                                to={portfolioLinks.github}
+                                target="_blank"
+                            >
+                                <i className="fab fa-github"></i>
+                            </Link>
+                            <Link
+                                className="btn btn-outline-light"
+                                style={{ marginLeft: "12px" }}
+                                to={portfolioLinks.linkedin}
+                                target="_blank"
+                            >
+                                <i className="fab fa-linkedin"></i>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="rights">
+                <p className="copy-right">
+                    © Copyright <b>Atik</b>. All Rights Reserved
+                </p>
+                <p className="design-by">Designed by Atik Salim Rangnekar</p>{" "}
+                {/* Changed class to className */}
+            </div>
+        </footer>
+    );
 };
 
 export default Footer;

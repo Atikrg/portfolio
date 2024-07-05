@@ -23,7 +23,7 @@ body {
 }
 
 .content-info {
-  margin-top: 17%;
+  margin-top: 20%;
 }
 
 .brand-text {
@@ -49,5 +49,9 @@ body {
 
   .brand_name {
     margin-top: 35%;
+  }
+  .content-info{
+  
+    margin-top: 50%;
   }
 }

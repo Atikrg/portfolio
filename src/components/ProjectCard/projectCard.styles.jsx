@@ -9,17 +9,16 @@ export const CardImage = styled.img`
     width: 390px;
     transition: transform 0.3s ease-in-out;
     &:hover{
-        transform: scale(1.2)
+        transform: scale(1.1)
     }
-
-
 `
 
 export const SpecificTitle = styled.div`
+
     opacity: 65%;
     font-weight: 500;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 28px;
 `
 
 export const Title = styled.div`
@@ -29,7 +28,7 @@ export const Title = styled.div`
 `
 
 export const ProjectDescription = styled.div`
-    font-size: 16px;
+    font-size: 20px;
     font-family: var(--cairosa);
     text-align: justify;
 `

@@ -1,135 +1,133 @@
-
-header{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
- 
+html {
+    scroll-behavior: smooth;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.navbar-component{
-  position: fixed;
-  background-color: white;
-  width: 100%;
-  z-index: 1;
+.navbar-component {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+    opacity: 95%;
 }
 
-
-
-.nav-link{
-  color: black;
-  font-family: 'Courier New', Courier, monospace;
-  text-decoration: none;
-  padding:4px; 
+.navbar-link {
+    font-size: 20px;
 }
 
-.button-close{
-  display: none;
+.nav-link {
+    color: black;
+    font-family: "Courier New", Courier, monospace;
+    text-decoration: none;
+    padding: 4px;
 }
 
-
-.brand-logo{
-  font-size: 20px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+.button-close {
+    display: none;
 }
 
-.navbar-link{
-  list-style: none;
-  text-transform: uppercase;
-  margin: 12px;
-  
+.brand-logo {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.navbar-list{
-  display: flex;
-  width:100;
-  
+.navbar-link {
+    list-style: none;
+    text-transform: uppercase;
+    margin: 12px;
+    padding: 4px;
+}
+
+.navbar-list {
+    display: flex;
+    width: 100;
 }
 
 .mobile-navbar-btn {
-  display: none;
-  background: transparent;
-  cursor: pointer;
+    display: none;
+    background: transparent;
+    cursor: pointer;
 }
 .mobile-nav-icon {
-  width: 4rem;
-  height: 4rem;
-  color: #212529;
+    width: 4rem;
+    height: 4rem;
+    color: #212529;
 }
 
 .mobile-nav-icon[name="close-outline"] {
-  display: none;
+    display: none;
 }
 
-
-@media (max-width: 650px){
-
-  header{
-    display: flex;
-    text-transform: uppercase;
-    flex-direction: column;
-  }
-
-  .navbar{
-    background-color: white;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .open{
-    .navbar-list{
-      display: block;
+@media (max-width: 650px) {
+    header {
+        display: flex;
+        text-transform: uppercase;
+        flex-direction: column;
     }
-  }
 
-  .close{
-    .navbar-list{
-      display: none;
+    .navbar {
+        background-color: white;
+        width: 100%;
+        display: flex;
+        text-align: start;
+        flex-direction: column;
+
+        padding: 12px;
     }
-   
-  }
 
-  .button-close{
-    display: block;
-    background-color: black;
-    color: white;
-    margin-top: 14px;
-    padding: 2px;
-    font-size: 34px;
-    width: 44px;
-    border-radius: 4px;
-    margin-left: 356px;
-    cursor: pointer;
+    .open {
+        .navbar-list {
+            display: block;
+        }
+    }
 
-  }
+    .close {
+        .navbar-list {
+            display: none;
+        }
+    }
 
-  .icons{
-    text-align: left;
-    float: right;
-    
-  }
+    .button-close {
+        display: block;
+        border: none;
+      
+        color: black;
+        margin-top: 14px;
+        padding: 2px;
+        font-size: 34px;
+        width: 44px;
+        border-radius: 4px;
+        margin-left: 356px;
+        cursor: pointer;
+    }
 
+    .icons {
+        text-align: left;
+        float: right;
+    }
 
-  .icon{
-    height: 45px;
-    width: 45px;
-  }
+    .icon {
+        height: 45px;
+        width: 45px;
+    }
 
-  
+    .nav-link {
+        color: white;
+    }
 
-  .nav-link{
-    color: black;
-   }
+    .navbar-list {
+        display: none;
+        color: black;
+        height: auto;
+        flex-direction: column;
+    }
 
-  .navbar-list{
-    display: none;
-    color: black;
-    height: auto;
-    flex-direction: column;
-  }
-
-   .navbar-link{
-    margin-top: 34px;
-   }
+    .navbar-link {
+        margin-top: 34px;
+    }
 }

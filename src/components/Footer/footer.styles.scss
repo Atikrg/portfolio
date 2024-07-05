@@ -3,12 +3,15 @@
     font-size: 16px;
 }
 footer{
-    background-color: #0062D3;
+    background-color: black;
     color:white;
     text-decoration: none;
+    margin-top: 190px;
   
 }
-
+.phone-link{
+    text-decoration: none;
+}
 
 .rights{
     display: flex;
@@ -41,9 +44,15 @@ footer{
 .further-info{
     line-height: -24px;
     position: relative;
-    margin-top: 1232px;
+    margin-top: 12px;
     font-size: 16px;
     color: yellow;
     padding-left:12px;
-    margin-top: 12px;
+}
+
+
+
+.font-size-24{
+    font-size: 20px;
+  
 }

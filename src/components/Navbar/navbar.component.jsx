@@ -1,87 +1,104 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./navbar.styles.css"
+import React, { useEffect, useState } from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import "./navbar.styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-
+import { supabase } from "../../config/supabase_client";
 const Navbar = () => {
-  const [visible, setVisible] = useState(true);
+    const [visible, setVisible] = useState(false);
+    const [portfolioLinks, setPortfolioLinks] = useState({});
+    const toggleVisibility = () => {
+        setVisible(!visible);
+    };
 
-  const toggleVisibility = () => {
-    setVisible(!visible);
-  };
-  return (
-    <div className="navbar-component">
-      <header>
-        <button
-          onClick={() => toggleVisibility()}
-          className="button-close text-center"
-          aria-label="Toggle Navigation"
-        >
-          {visible ? (
-            <FontAwesomeIcon icon={faXmark} />
-          ) : (
-            <FontAwesomeIcon icon={faBars} />
-          )}
-        </button>
+    useEffect(() => {
+        const getPortfolioLinks = async () => {
+            const { data, error } = await supabase.from("links").select();
 
-        <nav className={`navbar ${visible ? "open" : "close"}`}>
-          <ul className={"navbar-list"}>
-            <li className="navbar-link">
-              <Link to="#Home" className="nav-link a  active">
-                Home
-              </Link>
-            </li>
-            <li className="navbar-link">
-              <Link to="#Resume" className="nav-link">
-                Resume
-              </Link>
-            </li>
-            <li className="navbar-link">
-              <Link to="#Portfolio" className="nav-link">
-                Portfolio
-              </Link>
-            </li>
+            if (error) {
+                console.log(error);
+            }
 
-            <li className="navbar-link">
-              <Link to="#certifications" className="nav-link">
-                Certifications
-              </Link>
-            </li>
-            <li className="navbar-link">
-              <Link
-                to="https://www.upwork.com/freelancers/atikrangnekar"
-                className="nav-link"
-              >
-                Upwork
-              </Link>
-            </li>
-            <li className="navbar-link">
-              <Link to="#certifications" className="nav-link">
-                SKILLS
-              </Link>
-            </li>
+            if (data) {
+                setPortfolioLinks(...data);
+            }
+        };
+        getPortfolioLinks();
+    });
 
-            <li className="navbar-link">
-              <Link to="#certifications" className="nav-link">
-                Experiences
-              </Link>
-            </li>
-            <li className="navbar-link">
-              <Link to="#about" className="nav-link">
-                About me
-              </Link>
-            </li>
-            <li className="navbar-link">
-              <Link to="#Contact me" className="nav-link">
-                Contact me
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </div>
-  );
+
+    return (
+        <div className="navbar-component">
+            <header>
+                <button
+                    onClick={() => toggleVisibility()}
+                    className="button-close text-center"
+                    aria-label="Toggle Navigation"
+                >
+                    {visible ? (
+                        <FontAwesomeIcon
+                            icon={faXmark}
+                            style={{ border: "none" }}
+                        />
+                    ) : (
+                        <FontAwesomeIcon icon={faBars} />
+                    )}
+                </button>
+
+                <nav className={`navbar ${visible ? "open" : "close"}`}>
+                    <ul className={"navbar-list"}>
+                        <li className="navbar-link">
+                            <AnchorLink href="#home" className="nav-link">
+                                Home
+                            </AnchorLink>
+                        </li>
+
+                        <li className="navbar-link">
+                            <a
+                                href={portfolioLinks.upwork}
+                                className="nav-link "
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                upwork
+                            </a>
+                        </li>
+                        <li className="navbar-link">
+                            <a
+                                href={portfolioLinks.resume}
+                                className="nav-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Resume
+                            </a>
+                        </li>
+
+                        <li className="navbar-link">
+                            <AnchorLink
+                                href="#experiences"
+                                className="nav-link"
+                            >
+                                Experiences
+                            </AnchorLink>
+                        </li>
+
+                        <li className="navbar-link">
+                            <AnchorLink href="#about" className="nav-link">
+                                About me
+                            </AnchorLink>
+                        </li>
+
+                        <li className="navbar-link">
+                            <AnchorLink href="#contact" className="nav-link">
+                                Contact me
+                            </AnchorLink>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    );
 };
 
 export default Navbar;

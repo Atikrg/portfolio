@@ -1,46 +1,45 @@
-import React, {useRef} from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import React from "react";
+import moment from "moment";
 
 import {
-  CardImage,
-  SpecificTitle,
-  Title,
-  ProjectDescription,
-  DataSource,
-  Source,
-  ProjectComponents,
+    CardImage,
+    SpecificTitle,
+    Title,
+    ProjectDescription,
+    DataSource,
+    Source,
+    ProjectComponents,
 } from "./projectCard.styles";
 
-const ProjectCard = ({ title, description, imageUrl }) => {
+const ProjectCard = ({ title, image, source, date, link }) => {
+    return (
+        <ProjectComponents>
+            <br />
 
+            <a href={link}>
+                <CardImage
+                    src={image}
+                    alt="Description of the image"
+                    loading="lazy"
+                />
+            </a>
 
-  return (
-    <ProjectComponents>
-      <br />
-
-      <CardImage
-        
-        src={imageUrl}
-        alt="Description of the image"
-      />
-
-      <SpecificTitle>
+            {/*     <SpecificTitle>
         <p>Specific title</p>
-      </SpecificTitle>
+      </SpecificTitle> */}
 
-      <Title>{title}</Title>
+            <Title>{title}</Title>
 
-      <ProjectDescription>{description}</ProjectDescription>
+            {/* <ProjectDescription>{description}</ProjectDescription> */}
 
-      <DataSource>
-        December 2022
-        <Source>
-          <span> •</span> Source
-        </Source>
-      </DataSource>
-    </ProjectComponents>
-  );
+            <DataSource>
+                {moment(date).format("MMMM Do, YYYY")}
+                <Source>
+                    <span> •</span> <a href={source}>Source</a>
+                </Source>
+            </DataSource>
+        </ProjectComponents>
+    );
 };
 
 export default ProjectCard;

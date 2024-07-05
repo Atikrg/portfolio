@@ -1,22 +1,46 @@
 import React from "react";
-import "./aboutme.component.css";
+import "./aboutme.styles.css";
 import { Header } from "../ProjectCardPreview/project-card-preview.styles";
+import profile from "../../assests/images/atik.jpeg";
+import { supabase } from "../../config/supabase_client";
+import { useState, useEffect } from "react";
+function About() {
+    const [aboutInfo, setAboutInfo] = useState({});
 
-const Aboutme = () => {
-  return (
-    <div className="container">
-      <Header>Aboutme</Header>
-      <div className="aboutme-content">
-        <div className="clip-image"></div>
-        <div className="writeUp ">
-          My name is Atik Salim Rangnekar. I am a Full Stack Web Developer and
-          Machine Learning Expert. Currently Studying in Finolex Academy of
-          Management And Technology.
-          <br></br>
+    useEffect(() => {
+        const getAbout = async () => {
+            const { data, error } = await supabase.from("about").select();
+
+            if (error) {
+                console.log(error);
+            }
+
+            if (data) {
+                setAboutInfo(...data);
+            }
+        };
+        getAbout();
+    });
+
+    return (
+        <div className="container" style={{ marginTop: "24px" }} id="about">
+            <Header>Aboutme</Header>
+            <div className="aboutme-content">
+                <div className="">
+                    <img
+                        alt="profile_photo"
+                        className="nji"
+                        src={aboutInfo.image}
+                        loading="lazy"
+                    />
+                </div>
+                <div className="writeUp ">
+                    {aboutInfo.description}
+                    <br></br>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
-};
+    );
+}
 
-export default Aboutme;
+export default About;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContactComponent = styled.div`
   height: 50vh;
-  margin-top: 4%;
+  margin-top: 12%;
 `;
 
 export const ContactContent = styled.div`
@@ -30,7 +30,7 @@ export const InputText = styled.textarea`
 export const ContactButton = styled.input`
   padding: 6px;
   font-size: large;
-  text-transform: capitalize;
+  text-transform: uppercase;
 `;
 
 

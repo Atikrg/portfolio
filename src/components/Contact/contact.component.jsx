@@ -1,55 +1,74 @@
 import { Header } from "../ProjectCardPreview/project-card-preview.styles";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import {
-  ContactComponent,
-  ContactContent,
-  ContactButton,
-  InputEmail,
-  InputArea,
-  InputText,
-  SocialContact,
+    ContactComponent,
+    ContactContent,
+    ContactButton,
+    InputEmail,
+    InputArea,
+    InputText,
 } from "./contact.styles";
-import { Link } from "react-router-dom";
 
 const Contact = () => {
-  const [message, setMessage] = useState("");
-  return (
-    <ContactComponent>
-      <Header>Contact me</Header>
+    const [result, setResult] = React.useState("");
 
-      <ContactContent>
-        <form>
-          <InputEmail
-            className="input_email"
-            type="email"
-            placeholder="Enter email address"
-            required
-          />
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target);
 
-          <InputArea>
-            <InputText
-              className="input_text"
-              onChange={(event) => setMessage(event.target.value)}
-              type="textarea"
-              placeholder="Enter text"
-              required
-            />
-          </InputArea>
-          <ContactButton
-            className="contact-button1"
-            type="button"
-            value="submit"
-          />
-        </form>
+        formData.append("access_key", "f0fdfb55-70fe-4cfe-a5b9-fdf1dcf9c88f");
 
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData,
+        });
 
+        const data = await response.json();
 
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            event.target.reset();
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
+        }
+    };
 
-      </ContactContent>
+    return (
+        <ContactComponent>
+            <Header id="contact">Contact me</Header>
 
-    </ContactComponent>
-  );
+            <ContactContent>
+                <form onSubmit={onSubmit}>
+                    <InputEmail
+                        className="input_email"
+                        type="email"
+                        placeholder="Enter email address"
+                        required
+                        name="email"
+                    />
+
+                    <InputArea>
+                        <InputText
+                            className="input_text"
+                            type="textarea"
+                            placeholder="Enter text"
+                            name="message"
+                            required
+                        />
+                    </InputArea>
+                    <ContactButton
+                        className="contact-button1"
+                        type="submit"
+                        value="submit"
+                    />
+                </form>
+            </ContactContent>
+            <center>{result}</center>
+        </ContactComponent>
+    );
 };
 
 export default Contact;
