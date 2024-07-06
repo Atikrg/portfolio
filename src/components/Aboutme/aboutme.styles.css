@@ -1,4 +1,30 @@
-.aboutme-content {
+.aboutme-content{
+  padding:12px;
+  margin: 4px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.description{
+  text-align: justify;
+  color: black;
+  width: 720px;
+  font-size: 20px;
+}
+
+.nji {
+  background-color: black;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: white;
+  align-items: flex-start;
+}
+
+
+/* .aboutme-content {
     margin-top: 12%;
     margin-bottom: 15%;
     display: flex;
@@ -9,13 +35,10 @@
     padding: 12px;
 }
 
-.nji {
-    background-color: black;
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    border: white;
-}
+
+
+
+
 
 .view_resume {
     position: relative;
@@ -34,7 +57,7 @@
     margin-left: 27px;
     margin-top: 12px;
     text-align: justify;
-}
+} */
 
 /* .aboutme-header {
   font-size: 34px;
@@ -89,12 +112,24 @@
         width: 300px;
         border-radius: 50%;
     }
-    .aboutme-content {
+
+    .aboutme-content{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .description{
+      text-align: justify;
+      width: 400px;
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+  /*   .aboutme-content {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    }
+    } */
 }
 
 @media (max-width: 1243px) {
@@ -103,8 +138,9 @@
         height: 300px;
         width: 300px;
         border-radius: 50%;
+        text-align: center;
     }
-    .aboutme-content {
+   /*  .aboutme-content {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -112,11 +148,12 @@
     }
 
     .writeUp {
-        width: 420px;
-        font-size: 16px;
         text-align: justify;
-        margin-top: 22px;
-        padding: 6px;
-        margin-right: 34px;
     }
+
+    .writeUp::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+    } */
 }

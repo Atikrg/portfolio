@@ -25,8 +25,8 @@ function About() {
     return (
         <div className="container" style={{ marginTop: "24px" }} id="about">
             <Header>Aboutme</Header>
-            <div className="aboutme-content">
-                <div className="">
+            <center className="aboutme-content">
+                <div className="right">
                     <img
                         alt="profile_photo"
                         className="nji"
@@ -34,11 +34,11 @@ function About() {
                         loading="lazy"
                     />
                 </div>
-                <div className="writeUp ">
+                <div className="description">
                     {aboutInfo.description}
                     <br></br>
                 </div>
-            </div>
+            </center>
         </div>
     );
 }

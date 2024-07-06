@@ -45,7 +45,7 @@ const Navbar = () => {
                     )}
                 </button>
 
-                <nav className={`navbar`}>
+                <nav className={`navbar ${visible ? "open" : "close"}`}>
                     <ul className={"navbar-list"}>
                         <li className="navbar-link">
                             <AnchorLink href="#home" className="nav-link">
