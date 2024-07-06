@@ -32,7 +32,7 @@ const Navbar = () => {
             <header>
                 <button
                     onClick={() => toggleVisibility()}
-                    className="button-close text-center"
+                    className="button-close text-center menu-icon"
                     aria-label="Toggle Navigation"
                 >
                     {visible ? (
