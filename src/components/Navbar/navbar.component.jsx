@@ -42,7 +42,9 @@ const Navbar = () => {
                             style={{ border: "none" }}
                         />
                     ) : (
-                        <FontAwesomeIcon icon={faBars} />
+                        <FontAwesomeIcon
+                        className = "menu-icon"
+                        icon={faBars} />
                     )}
                 </button>
 
