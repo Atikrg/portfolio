@@ -80,6 +80,11 @@ header {
         padding: 12px;
     }
 
+    .menu-icon{
+      position: relative;
+     margin-left: -30px; 
+    }
+
     .open {
         .navbar-list {
             display: block;
@@ -91,7 +96,7 @@ header {
             display: none;
         }
     }
-
+  
     .button-close {
         display: block;
         border: none;

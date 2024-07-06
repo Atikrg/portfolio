@@ -37,6 +37,7 @@ const Navbar = () => {
                 >
                     {visible ? (
                         <FontAwesomeIcon
+                            className = "menu-icon"
                             icon={faXmark}
                             style={{ border: "none" }}
                         />
