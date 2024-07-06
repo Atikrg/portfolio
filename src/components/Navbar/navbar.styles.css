@@ -82,7 +82,7 @@ header {
 
     .menu-icon{
       position: relative;
-     margin-left: -30px; 
+      margin-left: -0px; 
     }
 
     .open {
@@ -100,14 +100,13 @@ header {
     .button-close {
         display: block;
         border: none;
-      
-        color: black;
+        opacity: 100%;
         margin-top: 14px;
         padding: 2px;
         font-size: 34px;
         width: 44px;
         border-radius: 4px;
-        margin-left: 356px;
+        margin-left: 300px;
         cursor: pointer;
     }
 

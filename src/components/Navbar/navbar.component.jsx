@@ -26,29 +26,26 @@ const Navbar = () => {
         getPortfolioLinks();
     });
 
-
     return (
         <div className="navbar-component">
             <header>
                 <button
                     onClick={() => toggleVisibility()}
-                    className="button-close text-center menu-icon"
+                    className="button-close text-center"
                     aria-label="Toggle Navigation"
                 >
                     {visible ? (
                         <FontAwesomeIcon
-                            className = "menu-icon"
+                            className="menu-icon"
                             icon={faXmark}
                             style={{ border: "none" }}
                         />
                     ) : (
-                        <FontAwesomeIcon
-                        className = "menu-icon"
-                        icon={faBars} />
+                        <FontAwesomeIcon className="menu-icon" icon={faBars} />
                     )}
                 </button>
 
-                <nav className={`navbar ${visible ? "open" : "close"}`}>
+                <nav className={`navbar`}>
                     <ul className={"navbar-list"}>
                         <li className="navbar-link">
                             <AnchorLink href="#home" className="nav-link">
