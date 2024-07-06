@@ -3,9 +3,7 @@ import moment from "moment";
 
 import {
     CardImage,
-    SpecificTitle,
     Title,
-    ProjectDescription,
     DataSource,
     Source,
     ProjectComponents,
@@ -34,8 +32,8 @@ const ProjectCard = ({ title, image, source, date, link }) => {
 
             <DataSource>
                 {moment(date).format("MMMM Do, YYYY")}
-                <Source>
-                    <span> •</span> <a href={source}>Source</a>
+                <Source to = {source} target="_blank" rel="noopener noreferrer">
+                    <span> •</span> Source
                 </Source>
             </DataSource>
         </ProjectComponents>

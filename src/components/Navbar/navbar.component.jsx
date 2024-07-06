@@ -73,6 +73,11 @@ const Navbar = () => {
                                 Resume
                             </a>
                         </li>
+                        <li className="navbar-link">
+                            <AnchorLink href="#projects" className="nav-link">
+                                Projects
+                            </AnchorLink>
+                        </li>
 
                         <li className="navbar-link">
                             <AnchorLink

@@ -1,7 +1,6 @@
 import React from "react";
 import "./aboutme.styles.css";
 import { Header } from "../ProjectCardPreview/project-card-preview.styles";
-import profile from "../../assests/images/atik.jpeg";
 import { supabase } from "../../config/supabase_client";
 import { useState, useEffect } from "react";
 function About() {
