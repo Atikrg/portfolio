@@ -37,7 +37,7 @@ const ProjectPreview = () => {
 
     return (
         <div className="project-preview">
-            <Header id = "projects">Projects</Header>
+            <Header id="projects">Projects</Header>
 
             <CardPreview>
                 {projects.length === 0 ? (
@@ -53,7 +53,7 @@ const ProjectPreview = () => {
                                 title={item.title}
                                 image={item.image}
                                 source={item.source}
-                                link={item.link}
+                                view={item.view}
                                 date={item.date}
                             />
                         ))

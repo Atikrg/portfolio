@@ -9,18 +9,19 @@ import {
     ProjectComponents,
 } from "./projectCard.styles";
 
-const ProjectCard = ({ title, image, source, date, link }) => {
+const ProjectCard = ({ title, image, source, date, view }) => {
     return (
         <ProjectComponents>
             <br />
-
-            <a href={link}>
+                <a href = {view}>
                 <CardImage
                     src={image}
                     alt="Description of the image"
                     loading="lazy"
                 />
-            </a>
+                </a>
+   
+        
 
             {/*     <SpecificTitle>
         <p>Specific title</p>
