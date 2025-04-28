@@ -8,25 +8,6 @@ import { useGSAP } from "@gsap/react";
 
 const InfoWork = (props) => {
 
-    const [brandInfo, setBrandInfo] = useState({});
-
-
-    useEffect(()=>{
-        const fetchBrandInfo = async ()=>{
-            const {data, error} = await supabase.from('Home').select();
-
-            if(error){
-                console.log(error);
-            }
-
-            setBrandInfo(...data);
-
-        }
-
-        fetchBrandInfo();
-    });
-
-
 
 
     const myInfo = useRef();
@@ -84,17 +65,16 @@ const InfoWork = (props) => {
                         className="brand brand-text text-center text-white"
                         ref={myName}
                     >
-                        {brandInfo.title}
+                        Atik
+                        Rangnekar
                     </h1>
                 </div>
-                <div className="speciality sub_info text-white">
-                    <h1 ref={mySpeciality}>
-                        {brandInfo.work}
-                    </h1>
+                <div className="speciality sub_info">
                     <h3 className="mywork" ref={myCurrentWork}>
-                        {brandInfo.position}
+                        Full Stack Developer | Mobile Developer
                     </h3>
                 </div>
+
             </div>
         </div>
     );

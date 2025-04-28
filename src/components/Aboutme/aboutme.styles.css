@@ -1,159 +1,56 @@
-.aboutme-content{
-  padding:12px;
-  margin: 4px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-}
-
-.description{
-  text-align: justify;
-  color: black;
-  width: 720px;
-  font-size: 20px;
-}
-
-.nji {
-  background-color: black;
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-  border: white;
-  align-items: flex-start;
-}
-
-
-/* .aboutme-content {
-    margin-top: 12%;
-    margin-bottom: 15%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-left: 28px;
-    padding: 12px;
-}
-
-
-
-
-
-
-.view_resume {
-    position: relative;
-    color: white;
-    padding: 8px;
-    font-style: capitalize;
-    border: none;
-    background-color: black;
-    font-size: 16px;
-    border-radius: 4px;
-    margin-top: 16px;
-}
-
-.writeUp {
-    font-size: 20px;
-    margin-left: 27px;
-    margin-top: 12px;
-    text-align: justify;
-} */
-
-/* .aboutme-header {
-  font-size: 34px;
-  font-family: Cairo;
-  margin-top: 44px;
-  margin-bottom: 44px;
-}
-
-.clip-image {
-  background-image: url("../../assests/images/im3.png");
-  background-repeat: no-repeat;
-  height: 600px;
-  width: 1095px;
-  position: relative;
-}
-
-.aboutme-content {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  margin: 0px 245px 0px 245px;
-}
-
-.writeUp {
-  margin-top: 114px;
-  padding: 10px;
-
-  font-size: 24px;
-}
-
-.view_resume{
-  border: none;
-  border-radius: 12px;
-  font-size: 20px;
-  text-transform: capitalize;
+.about-wrapper {
+  padding: 80px 20px;
+  background: #0e0e0e;
+  min-height: 100vh;
   color: white;
-  background-color: black;
-  padding: 8px;
-  cursor: pointer;
-
 }
 
-.view_resume:hover{
-  margin-top: 2px;
-}
-*/
-@media (max-width: 576px) {
-    .clip-image {
-        background-image: url("../../assests/images/im4.png");
-        height: 300px;
-        width: 300px;
-        border-radius: 50%;
-    }
-
-    .aboutme-content{
-      display: flex;
-      flex-direction: column;
-    }
-
-    .description{
-      text-align: justify;
-      width: 320px;
-      font-family: Arial, Helvetica, sans-serif;
-
-    }
-  /*   .aboutme-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    } */
+.about-container {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media (max-width: 1243px) {
-    .clip-image {
-        background-image: url("../../assests/images/im4.png");
-        height: 300px;
-        width: 300px;
-        border-radius: 50%;
-        text-align: center;
-    }
-   /*  .aboutme-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+.about-image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #ff8a00;
+  box-shadow: 0 5px 20px rgba(255, 138, 0, 0.5);
+}
 
-    .writeUp {
-        text-align: justify;
-    }
+.about-description h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    .writeUp::after {
-        content: "";
-        display: inline-block;
-        width: 100%;
-    } */
+.about-description p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #d3d3d3;
+}
+
+.about-description p::first-letter {
+  font-size: 2rem;
+  color: #ff8a00;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;
+    text-align: left;
+    gap: 50px;
+  }
 }

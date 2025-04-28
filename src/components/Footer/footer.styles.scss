@@ -1,62 +1,99 @@
-footer{
-    background-color: black;
-    color:white;
-    text-decoration: none;
-    margin-top: 190px;
+.footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 30px 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-
-.copy-right{
-    margin-top: 12px;
-    font-size: 16px;
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-
-
-.phone-link{
-    text-decoration: none;
+.footer-header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.rights{
+.details {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00bcd4;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-content {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-info {
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-
-.email-info, .phone-info, .location-info{
-    color: yellow;
-    display: flex;
-    flex-direction: row;
-    text-decoration: none;
-
+.contact-item {
+    margin-bottom: 20px;
 }
 
-.details{
-    font-size:30px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    word-spacing: 1px;
-}
-
-.details, .email-link, .phone-link, .location{
-    color: white;
-    margin-left: 12px;
-}
-
-
-.further-info{
-    line-height: -24px;
-    position: relative;
-    margin-top: 12px;
-    font-size: 16px;
-    color: yellow;
-    padding-left:12px;
-}
-
-
-
-.font-size-24{
+.info-title {
     font-size: 20px;
-  
-} 
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.info-link, .info-text {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.info-link:hover {
+    color: #00bcd4;
+}
+
+.social-contact {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.social-btn {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    color: #00bcd4;
+    transform: scale(1.1);
+}
+
+.about-info {
+    max-width: 60%;
+}
+
+.about-text {
+    font-size: 18px;
+    color: #bbb;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+.copy-right {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.design-by {
+    font-size: 14px;
+}

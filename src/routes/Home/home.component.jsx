@@ -9,6 +9,7 @@ import "./home.component.css";
 import Navbar from "../../components/Navbar/navbar.component";
 import React from "react";
 import { useEffect } from "react";
+import Blogs from "../../components/Blogs/blogs.component";
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
                 <div id="home">
                     <Navbar />
                     <InfoWork />
+                    <Blogs/>
                     <About />
                     <Experience />
                     <ProjectPreview />

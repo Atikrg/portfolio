@@ -1,67 +1,63 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import "./navbar.styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { supabase } from "../../config/supabase_client";
+import "./navbar.styles.css";
+
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
     const [portfolioLinks, setPortfolioLinks] = useState({});
+    const [sticky, setSticky] = useState(false);
+
     const toggleVisibility = () => {
         setVisible(!visible);
     };
 
     useEffect(() => {
-        const getPortfolioLinks = async () => {
-            const { data, error } = await supabase.from("links").select();
-
-            if (error) {
-                console.log(error);
-            }
-
-            if (data) {
-                setPortfolioLinks(...data);
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setSticky(true);
+            } else {
+                setSticky(false);
             }
         };
-        getPortfolioLinks();
-    });
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
-        <div className="navbar-component">
+        <div className={`navbar-component ${sticky ? "sticky-navbar" : ""}`}>
             <header>
+                {/* Logo */}
+                <a href="/" className="navbar-logo">
+                    <span className="logo-highlight">Atik's</span> Portfolio
+                </a>
+
+                {/* Hamburger Button */}
                 <button
-                    onClick={() => toggleVisibility()}
-                    className="button-close text-center"
+                    onClick={toggleVisibility}
+                    className={`button-close ${visible ? "open" : ""}`}
                     aria-label="Toggle Navigation"
                 >
                     {visible ? (
-                        <FontAwesomeIcon
-                            className="menu-icon"
-                            icon={faXmark}
-                            style={{ border: "none" }}
-                        />
+                        <FontAwesomeIcon className="menu-icon" icon={faXmark} />
                     ) : (
                         <FontAwesomeIcon className="menu-icon" icon={faBars} />
                     )}
                 </button>
 
-                <nav className={`navbar ${visible ? "open" : "close"}`}>
-                    <ul className={"navbar-list"}>
+                {/* Navbar */}
+                <nav className={`navbar ${sticky ? "sticky" : ""}`}>
+                    <ul className={`navbar-list ${visible ? "open" : ""}`}>
                         <li className="navbar-link">
                             <AnchorLink href="#home" className="nav-link">
                                 Home
                             </AnchorLink>
-                        </li>
-
-                        <li className="navbar-link">
-                            <a
-                                href={portfolioLinks.upwork}
-                                className="nav-link "
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                upwork
-                            </a>
                         </li>
                         <li className="navbar-link">
                             <a
@@ -75,28 +71,22 @@ const Navbar = () => {
                         </li>
                         <li className="navbar-link">
                             <AnchorLink href="#projects" className="nav-link">
-                                Projects
+                                My Work
                             </AnchorLink>
                         </li>
-
                         <li className="navbar-link">
-                            <AnchorLink
-                                href="#experiences"
-                                className="nav-link"
-                            >
+                            <AnchorLink href="#experiences" className="nav-link">
                                 Experiences
                             </AnchorLink>
                         </li>
-
                         <li className="navbar-link">
                             <AnchorLink href="#about" className="nav-link">
-                                About me
+                                About Me
                             </AnchorLink>
                         </li>
-
                         <li className="navbar-link">
                             <AnchorLink href="#contact" className="nav-link">
-                                Contact me
+                                Contact Me
                             </AnchorLink>
                         </li>
                     </ul>

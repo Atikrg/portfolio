@@ -12,8 +12,8 @@ body {
 }
 
 .brand-container {
-  background-color: black;
-  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  height: 60vh;
   width: 100%;
   overflow: hidden;
 }
@@ -23,13 +23,13 @@ body {
 }
 
 .content-info {
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 .brand-text {
   /*  font-family: "Madimi One", sans-serif; */
-  font-family: "Madimi One", sans-serif;
-  font-weight: bolder;
+ 
+  font-weight:900;
   font-size: 100px;
   color: white;
 }
@@ -53,5 +53,39 @@ body {
   .content-info{
   
     margin-top: 50%;
+  }
+}
+
+.speciality {
+  background: transparent;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sub_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mywork {
+  color: #ffffff;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  word-spacing: 6px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00f260, #0575e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #00f260, 0 0 10px #00f260, 0 0 20px #00f260;
+  }
+
+  to {
+    text-shadow: 0 0 10px #0575e6, 0 0 20px #0575e6, 0 0 30px #0575e6;
   }
 }

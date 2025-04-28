@@ -1,137 +1,134 @@
-html {
-    scroll-behavior: smooth;
-}
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
+/* General Navbar Styles */
 .navbar-component {
+    background-color: #333;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.sticky-navbar {
     position: fixed;
-    background-color: white;
+    top: 0;
     width: 100%;
-    z-index: 1;
-    opacity: 95%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-link {
-    font-size: 20px;
-}
-
-.nav-link {
-    color: black;
-    font-family: "Courier New", Courier, monospace;
+.navbar-logo {
+    font-size: 28px;
+    color: #fff;
     text-decoration: none;
-    padding: 4px;
+    font-weight: bold;
+}
+
+.logo-highlight {
+    color: #00bcd4;
+    /* Highlight color */
 }
 
 .button-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
     display: none;
 }
 
-.brand-logo {
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.navbar-link {
-    list-style: none;
-    text-transform: uppercase;
-    margin: 12px;
-    padding: 4px;
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .navbar-list {
     display: flex;
-    width: 100;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.mobile-navbar-btn {
-    display: none;
-    background: transparent;
-    cursor: pointer;
-}
-.mobile-nav-icon {
-    width: 4rem;
-    height: 4rem;
-    color: #212529;
+.navbar-link {
+    margin: 0 15px;
 }
 
-.mobile-nav-icon[name="close-outline"] {
-    display: none;
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
-@media (max-width: 650px) {
-    header {
-        display: flex;
-        text-transform: uppercase;
-        flex-direction: column;
-    }
+.nav-link:hover {
+    color: #00bcd4;
+    /* Highlight color on hover */
+}
 
-    .navbar {
-        background-color: white;
-        width: 100%;
-        display: flex;
-        text-align: start;
-        flex-direction: column;
-
-        padding: 12px;
-    }
-
-    .menu-icon{
-      position: relative;
-      margin-left: -0px; 
-    }
-
-    .open {
-        .navbar-list {
-            display: block;
-        }
-    }
-
-    .close {
-        .navbar-list {
-            display: none;
-        }
-    }
-  
-    .button-close {
-        display: block;
-        border: none;
-        opacity: 100%;
-        margin-top: 14px;
-        padding: 2px;
-        font-size: 34px;
-        width: 44px;
-        border-radius: 4px;
-        margin-left: 300px;
-        cursor: pointer;
-    }
-
-    .icons {
-        text-align: left;
-        float: right;
-    }
-
-    .icon {
-        height: 45px;
-        width: 45px;
-    }
-
-    .nav-link {
-        color: white;
-    }
-
+/* Mobile Styles */
+@media (max-width: 768px) {
     .navbar-list {
         display: none;
-        color: black;
-        height: auto;
         flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        padding: 20px;
+    }
+
+    .navbar-list.open {
+        display: flex;
+    }
+
+    .button-close.open {
+        transform: rotate(180deg);
     }
 
     .navbar-link {
-        margin-top: 34px;
+        margin: 10px 0;
     }
 }
+
+/* Sticky Navbar Styles */
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    /* Dark background when sticky */
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Small devices */
+@media (max-width: 768px) {
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        width: 100%;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        display: none;
+        z-index: 1000;
+    }
+
+    .navbar-list.open {
+        display: flex;
+    }
+
+    .navbar-link {
+        margin: 15px 0;
+    }
+}
+
+.navbar-link{
+    color: white;
+}
+

@@ -1,6 +1,5 @@
 import React from "react";
 import moment from "moment";
-
 import {
     CardImage,
     Title,
@@ -12,28 +11,19 @@ import {
 const ProjectCard = ({ title, image, source, date, view }) => {
     return (
         <ProjectComponents>
-            <br />
-                <a href = {view}>
+            <a href={view} target="_blank" rel="noopener noreferrer">
                 <CardImage
                     src={image}
-                    alt="Description of the image"
+                    alt={`Image for ${title}`}
                     loading="lazy"
                 />
-                </a>
-   
-        
-
-            {/*     <SpecificTitle>
-        <p>Specific title</p>
-      </SpecificTitle> */}
+            </a>
 
             <Title>{title}</Title>
 
-            {/* <ProjectDescription>{description}</ProjectDescription> */}
-
             <DataSource>
-                {moment(date).format("MMMM Do, YYYY")}
-                <Source to = {source} target="_blank" rel="noopener noreferrer">
+                <span>{moment(date).format("MMMM Do, YYYY")}</span>
+                <Source to={source} target="_blank" rel="noopener noreferrer">
                     <span> •</span> Source
                 </Source>
             </DataSource>

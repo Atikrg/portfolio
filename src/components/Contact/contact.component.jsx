@@ -1,6 +1,5 @@
+import React, { useState } from "react";
 import { Header } from "../ProjectCardPreview/project-card-preview.styles";
-import React from "react";
-
 import {
     ContactComponent,
     ContactContent,
@@ -11,11 +10,11 @@ import {
 } from "./contact.styles";
 
 const Contact = () => {
-    const [result, setResult] = React.useState("");
+    const [result, setResult] = useState("");
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        setResult("Sending....");
+        setResult("Sending...");
         const formData = new FormData(event.target);
 
         formData.append("access_key", process.env.REACT_APP_WEB3_ACCESS_KEY);
@@ -28,45 +27,42 @@ const Contact = () => {
         const data = await response.json();
 
         if (data.success) {
-            setResult("Form Submitted Successfully");
+            setResult("✅ Message sent successfully!");
             event.target.reset();
         } else {
-            console.log("Error", data);
-            setResult(data.message);
+            console.error("Error:", data);
+            setResult(`❌ ${data.message}`);
         }
     };
 
     return (
-        <ContactComponent>
-            <Header id="contact">Contact me</Header>
+        <ContactComponent id="contact">
+            <Header>📬 Contact Me</Header>
 
-            <ContactContent>
-                <form onSubmit={onSubmit}>
-                    <InputEmail
-                        className="input_email"
-                        type="email"
-                        placeholder="Enter email address"
+            <ContactContent onSubmit={onSubmit} as="form">
+                <InputEmail
+                    type="email"
+                    placeholder="Your email address"
+                    name="email"
+                    required
+                />
+
+                <InputArea>
+                    <InputText
+                        as="textarea"
+                        rows="6"
+                        placeholder="Your message..."
+                        name="message"
                         required
-                        name="email"
                     />
+                </InputArea>
 
-                    <InputArea>
-                        <InputText
-                            className="input_text"
-                            type="textarea"
-                            placeholder="Enter text"
-                            name="message"
-                            required
-                        />
-                    </InputArea>
-                    <ContactButton
-                        className="contact-button1"
-                        type="submit"
-                        value="submit"
-                    />
-                </form>
+                <ContactButton type="submit">Send Message</ContactButton>
+
+                <div style={{ marginTop: "16px", color: "#ccc" }}>
+                    {result && <p>{result}</p>}
+                </div>
             </ContactContent>
-            <center>{result}</center>
         </ContactComponent>
     );
 };

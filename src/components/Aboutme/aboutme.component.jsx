@@ -1,43 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./aboutme.styles.css";
 import { Header } from "../ProjectCardPreview/project-card-preview.styles";
-import { supabase } from "../../config/supabase_client";
-import { useState, useEffect } from "react";
+
 function About() {
     const [aboutInfo, setAboutInfo] = useState({});
 
-    useEffect(() => {
-        const getAbout = async () => {
-            const { data, error } = await supabase.from("about").select();
 
-            if (error) {
-                console.log(error);
-            }
-
-            if (data) {
-                setAboutInfo(...data);
-            }
-        };
-        getAbout();
-    });
 
     return (
-        <div className="container" style={{ marginTop: "24px" }} id="about">
-            <Header>Aboutme</Header>
-            <center className="aboutme-content">
-                <div className="right">
-                    <img
-                        alt="profile_photo"
-                        className="nji"
-                        src={aboutInfo.image}
-                        loading="lazy"
-                    />
+        <div className="about-wrapper" id="about">
+            <Header>👋 About Me</Header>
+
+            <div className="about-container">
+                {/* If you want to use image later */}
+                {/* <div className="about-image">
+          <img
+            src={aboutInfo.image}
+            alt="Profile"
+            loading="lazy"
+          />
+        </div> */}
+
+                <div className="about-description">
+                    <h2>Hello! 👋</h2>
+                    <p>
+                        I am a passionate software developer specializing in Android and Web applications.
+                        I bring enthusiasm to every project and a strong dedication to competitive programming.
+                        My mission is to help clients grow their businesses through efficient, scalable software solutions. 🚀
+                    </p>
                 </div>
-                <div className="description">
-                    {aboutInfo.description}
-                    <br></br>
-                </div>
-            </center>
+            </div>
         </div>
     );
 }
