@@ -43,7 +43,7 @@
 
 .about-description p::first-letter {
   font-size: 2rem;
-  color: #ff8a00;
+color: #ff8a00;
   font-weight: bold;
 }
 

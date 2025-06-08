@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./footer.styles.scss"; // Assuming you are using SCSS for styling
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
     return (
         <footer className="footer">
@@ -28,24 +28,15 @@ const Footer = () => {
                                 <p className="info-text">India</p>
                             </div>
 
-                            <div className="contact-item">
-                                <p className="info-title">Phone:</p>
-                                <a
-                                    className="info-link"
-                                    href="tel:+917888187782"
-                                >
-                                    +91 78881-87782
-                                </a>
-                            </div>
 
                             <div className="social-contact">
-                                <Link className="social-btn" to="#" target="_blank">
-                                    <i className="fab fa-instagram"></i>
+                                <Link className="social-btn" to="https://www.linkedin.com/in/atikrangnekar/" target="_blank">
+                                    <i class="fab fa-linkedin-in"></i> 
                                 </Link>
                                 <Link
                                     className="social-btn"
                                     style={{ marginLeft: "12px" }}
-                                    to="#"
+                                    to="https://github.com/Atikrg"
                                     target="_blank"
                                 >
                                     <i className="fab fa-github"></i>
@@ -53,10 +44,18 @@ const Footer = () => {
                                 <Link
                                     className="social-btn"
                                     style={{ marginLeft: "12px" }}
-                                    to="#"
+                                    to="https://www.linkedin.com/in/atikrangnekar/"
                                     target="_blank"
                                 >
                                     <i className="fab fa-linkedin"></i>
+                                </Link>
+                                <Link
+                                    className="social-btn"
+                                    style={{ marginLeft: "12px" }}
+                                    to="https://x.com/RangnekarAtik"
+                                    target="_blank"
+                                ><i icon="fa-brands fa-x-twitter" />
+
                                 </Link>
                             </div>
                         </div>

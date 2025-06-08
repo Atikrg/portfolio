@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./aboutme.styles.css";
 import { Header } from "../ProjectCardPreview/project-card-preview.styles";
+import AboutData from "../../assests/json_files/about.json";
 
 function About() {
     const [aboutInfo, setAboutInfo] = useState({});
@@ -22,11 +23,11 @@ function About() {
         </div> */}
 
                 <div className="about-description">
-                    <h2>Hello! 👋</h2>
+                    <h2>{AboutData[0].greeting}</h2>
                     <p>
-                        I am a passionate software developer specializing in Android and Web applications.
-                        I bring enthusiasm to every project and a strong dedication to competitive programming.
-                        My mission is to help clients grow their businesses through efficient, scalable software solutions. 🚀
+                        {
+                            AboutData[0].aboutme
+                     }
                     </p>
                 </div>
             </div>

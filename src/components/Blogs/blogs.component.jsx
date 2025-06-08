@@ -1,7 +1,5 @@
-import { Height } from "@mui/icons-material";
 import "./blogs.styles.css";
 import BlogsData from '../../assests/json_files/blogs.json';
-
 
 const Blogs = () => {
       return (
@@ -10,9 +8,19 @@ const Blogs = () => {
 
                   <div className="blogs_container">
                         {BlogsData.map((item, index) => (
-                              <a href={item.link} key={item.id} className="blog-card">
+                              <a
+                                    href={item.link}
+                                    key={item.id}
+                                    className="blog-card"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{ "--delay": `${index * 100}ms` }}
+                              >
                                     <div className="blog-content">
                                           <h4>{item.header}</h4>
+                                          {item.description && (
+                                                <p className="blog-description">{item.description}</p>
+                                          )}
                                           <span className="read-more">Read More →</span>
                                     </div>
                               </a>

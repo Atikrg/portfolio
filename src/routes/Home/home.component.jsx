@@ -10,6 +10,7 @@ import Navbar from "../../components/Navbar/navbar.component";
 import React from "react";
 import { useEffect } from "react";
 import Blogs from "../../components/Blogs/blogs.component";
+import Skills from "../../components/Skills/Skills.component";
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
                     <InfoWork />
                     <Blogs/>
                     <About />
+                    <Skills/>
                     <Experience />
                     <ProjectPreview />
                     <Contact />

@@ -1,68 +1,78 @@
 .experience-wrapper {
-    background: #0e0e0e;
-    color: white;
-    padding: 80px 20px;
+    background-color: #121212;
+    /* Dark black background */
+    padding: 40px 20px;
     min-height: 100vh;
+    color: #eee;
+    /* Light text color for contrast */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.experience-container {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+.timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 3px solid #ff8a00;
+    /* Orange timeline line */
 }
 
-.experience-card {
-    background: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 12px;
-    padding: 24px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 20px;
 }
 
-.experience-card:hover {
-    transform: translateY(-5px);
-    border-color: #ff8a00;
+.timeline-dot {
+    position: absolute;
+    left: -11px;
+    top: 8px;
+    width: 18px;
+    height: 18px;
+    background-color: #ff8a00;
+    /* Orange dot */
+    border-radius: 50%;
+    border: 3px solid #121212;
+    /* Border same as background to create a ring effect */
+    box-shadow: 0 0 8px rgba(255, 138, 0, 0.9);
 }
 
-.experience-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
+.timeline-content {
+    background: #1e1e1e;
+    /* Dark grey content background */
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 0.8);
+    color: #eee;
 }
 
 .experience-header h3 {
-    font-size: 1.5rem;
+    margin: 0 0 6px;
     color: #ff8a00;
+    /* Orange header */
 }
 
 .experience-date {
     font-size: 0.9rem;
-    color: #aaa;
+    color: #bbb;
+    /* lighter grey for dates */
 }
 
-.experience-position {
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.experience-description {
-    color: #ccc;
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
+.experience-position,
+.experience-description,
 .experience-skills {
-    font-style: italic;
-    color: #ffb347;
+    margin: 5px 0;
+    color: #ddd;
 }
 
-@media (min-width: 768px) {
-    .experience-container {
-        grid-template-columns: 1fr 1fr;
-    }
+.timeline-container {
+    max-width: 700px;
+    /* or any width you want */
+    margin: 0 auto;
+    /* center horizontally */
+    padding: 0 20px;
+    /* optional side padding */
+}
+
+.experience-wrapper>h2 {
+    text-align: center;
 }
