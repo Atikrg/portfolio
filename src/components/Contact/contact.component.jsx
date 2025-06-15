@@ -40,6 +40,7 @@ const Contact = () => {
             <Header>📬 Contact Me</Header>
 
             <ContactContent onSubmit={onSubmit} as="form">
+                <center className="text-white">Will contact within 12 hours</center>
                 <InputEmail
                     type="email"
                     placeholder="Your email address"
