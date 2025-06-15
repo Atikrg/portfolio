@@ -31,10 +31,10 @@ const skillsData = [
       {
             category: 'Tools & Platforms',
             icon: <Wrench className="icon purple" />,
-            skills: ['Git', 'Docker', 'Firebase', 'Vercel', 'Postman'],
+            skills: ['Git', 'Docker', 'Firebase', 'Vercel', 'Postman', "Deployment"],
       },
 ];
-    
+
 const Skills = () => {
       return (
             <SkillsSection>
@@ -48,7 +48,7 @@ const Skills = () => {
                                     </SkillsHeader>
                                     <SkillsList>
                                           {section.skills.map((skill, i) => (
-                                                <SkillItem  key={i}>{skill}</SkillItem>
+                                                <SkillItem key={i}>{skill}</SkillItem>
                                           ))}
                                     </SkillsList>
                               </SkillsCard>
