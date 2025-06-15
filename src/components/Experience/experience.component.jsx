@@ -7,7 +7,7 @@ export default function Experience() {
     const [experience, setExperienceInfo] = useState([]);
 
     useEffect(() => {
-   
+
         setExperienceInfo(experienceData);
 
 
@@ -30,20 +30,19 @@ export default function Experience() {
                                     <div className="timeline-content">
                                         <div className="experience-header">
                                             <h3>{item.title}</h3>
-                             
+
                                             <span className="experience-date">
                                                 {moment(item.start_date).format("MMM YYYY")} -{" "}
 
-
                                                 {
-                                                    console.log("end date is",moment(item.end_date).format("MMM YYYY"))
+                                                    console.log("end date is", moment(item.end_date).format("MMM YYYY"))
                                                 }
-                                                {typeof moment(item.end_date).format("MMM YYYY")  ? moment(item.end_date).format("MMM YYYY") : "Present"}
+                                                {moment(item.end_date).format("MMM YYYY") !== "Invalid date" ? moment(item.end_date).format("MMM YYYY") : "Present"}
                                             </span>
                                         </div>
                                         <p className="experience-position">
                                             Company: {item.company}
-                                            <br/>
+                                            <br />
                                             Position: {item.position}
 
                                         </p>
@@ -63,7 +62,7 @@ export default function Experience() {
                 </div>
             </div>
         </div>
-      
+
     );
-      
+
 }
