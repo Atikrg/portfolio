@@ -1,21 +1,19 @@
 [
-
-      {     "id": 1,
+      {
+            "id": 1,
             "name": "linkedin",
             "link": "https://www.linkedin.com/in/atikrangnekar/",
             "active": true
-
       },
       {
-
             "id": 2,
-            "name" : "github",
+            "name": "github",
             "link": "https://github.com/Atikrg",
             "active": true
       },
       {
             "id": 3,
-            "name" : "leetcode",
+            "name": "leetcode",
             "link": "https://leetcode.com/u/atikrangnekar28/",
             "active": true
       },
@@ -24,14 +22,17 @@
             "name": "codechef",
             "link": "https://www.codechef.com/users/atikrangnekar",
             "active": true
-
       },
       {
             "id": 5,
             "name": "hashnode",
             "link": "https://hashnode.com/@atikrangnekar",
             "active": true
-
+      },
+      {
+            "id": 6,
+            "name": "twitter-x",
+            "link": "https://twitter.com/RangnekarAtik",
+            "active": true
       }
-
 ]

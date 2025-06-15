@@ -48,7 +48,7 @@ const Skills = () => {
                                     </SkillsHeader>
                                     <SkillsList>
                                           {section.skills.map((skill, i) => (
-                                                <SkillItem key={i}>{skill}</SkillItem>
+                                                <SkillItem  key={i}>{skill}</SkillItem>
                                           ))}
                                     </SkillsList>
                               </SkillsCard>

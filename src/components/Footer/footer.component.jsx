@@ -31,33 +31,16 @@ const Footer = () => {
 
                             <div className="social-contact">
                                 <Link className="social-btn" to="https://www.linkedin.com/in/atikrangnekar/" target="_blank">
-                                    <i class="fab fa-linkedin-in"></i> 
+                                    <i className="fab fa-linkedin-in"></i>
                                 </Link>
-                                <Link
-                                    className="social-btn"
-                                    style={{ marginLeft: "12px" }}
-                                    to="https://github.com/Atikrg"
-                                    target="_blank"
-                                >
+                                <Link className="social-btn" style={{ marginLeft: "12px" }} to="https://github.com/Atikrg" target="_blank">
                                     <i className="fab fa-github"></i>
                                 </Link>
-                                <Link
-                                    className="social-btn"
-                                    style={{ marginLeft: "12px" }}
-                                    to="https://www.linkedin.com/in/atikrangnekar/"
-                                    target="_blank"
-                                >
-                                    <i className="fab fa-linkedin"></i>
-                                </Link>
-                                <Link
-                                    className="social-btn"
-                                    style={{ marginLeft: "12px" }}
-                                    to="https://x.com/RangnekarAtik"
-                                    target="_blank"
-                                ><i icon="fa-brands fa-x-twitter" />
-
+                                <Link className="social-btn" style={{ marginLeft: "12px" }} to="https://twitter.com/RangnekarAtik" target="_blank">
+                                    <i className="fa-brands fa-x-twitter"></i>
                                 </Link>
                             </div>
+
                         </div>
 
                         <div className="col-md-7 about-info">

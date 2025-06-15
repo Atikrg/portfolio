@@ -27,9 +27,9 @@ const Blogs = () => {
                         ))}
                   </div>
 
-                  <div className="more-blogs">
+                  {/* <div className="more-blogs">
                         <a href="#">View All Blogs →</a>
-                  </div>
+                  </div> */}
             </div>
       );
 }

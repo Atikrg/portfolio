@@ -1,27 +1,12 @@
 [
       {
             "id": "1",
-            "link": "#",
+            "link": "https://tinyurl.com/react-native-paper-guide",
             "header": "React Paper Configuration in React Native Without Framework"
       },
       {
             "id": "2",
             "link": "#",
             "header": "Connect Mobile Wirelessly While Developing Android Device"
-      },
-      {
-            "id": "3",
-            "link": "#",
-            "header": "Optimizing Your Mobile Dev Environment Without Wires"
-      },
-      {
-            "id": "4",
-            "link": "#",
-            "header": "Best Practices for React Native Configuration"
-      },
-      {
-            "id": "5",
-            "link": "#",
-            "header": "Speed Up Android Development: Wireless Setup"
       }
 ]

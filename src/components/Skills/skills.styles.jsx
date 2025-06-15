@@ -85,7 +85,7 @@ export const SkillItem = styled.li`
   font-size: 1rem;
   color: #d1d5db;
   margin-bottom: 0.5rem;
-
+  cursor: pointer;
   &:hover {
     color: #ff8a00;
   }
