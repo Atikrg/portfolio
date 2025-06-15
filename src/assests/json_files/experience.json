@@ -1,0 +1,48 @@
+[
+      [
+            {
+                  "title": "Full Stack Software Developer and Full Stack Mobile Developer",
+                  "position": "Software Developer",
+                  "description": "Worked on 2+ projects",
+                  "skills": [
+                        "React",
+                        "Node",
+                        "CSS",
+                        "Nginx",
+                        "Project Deployment using Digital Ocean droplet",
+                        "Flutter",
+                        "Python",
+                        "CI CD pipeline"
+                  ],
+                  "start_date": "2021-01-01",
+                  "end_date": "2022-06-30"
+            },
+            {
+                  "title": "Software Developer Intern",
+                  "position": "Node.js Developer",
+                  "description": "Created REST APIs and optimized database queries.",
+                  "skills": [
+                        "Node.js",
+                        "Express",
+                        "React",
+                        "Grafana Load Testing",
+                        "Websocket",
+                        "Deploying in production using Vercel, railway , AWS "
+                  ],
+                  "start_date": "2019-05-01",
+                  "end_date": "2020-12-31"
+            },
+            {
+                  "title": "Internship",
+                  "position": "Software Developer Internship",
+                  "skills": [
+                        "Laravel",
+                        "Figma",
+                        "Low Level System Designing"
+                  
+                  ],
+                  "start_date": "2018-06-01",
+                  "end_date": "2018-12-31"
+            }
+      ]
+]
