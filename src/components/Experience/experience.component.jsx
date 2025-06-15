@@ -33,7 +33,12 @@ export default function Experience() {
                              
                                             <span className="experience-date">
                                                 {moment(item.start_date).format("MMM YYYY")} -{" "}
-                                                {moment(item.end_date).format("MMM YYYY")}
+
+
+                                                {
+                                                    console.log("end date is",moment(item.end_date).format("MMM YYYY"))
+                                                }
+                                                {typeof moment(item.end_date).format("MMM YYYY")  ? moment(item.end_date).format("MMM YYYY") : "Present"}
                                             </span>
                                         </div>
                                         <p className="experience-position">

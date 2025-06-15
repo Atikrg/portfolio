@@ -15,8 +15,8 @@
                         "Python",
                         "CI CD pipeline"
                   ],
-                  "start_date": "2021-01-01",
-                  "end_date": "2022-06-30"
+                  "start_date": "October 2024",
+                  "end_date": "-"
             },
             {
                   "title": "Software Developer Intern",
@@ -31,8 +31,8 @@
                         "Websocket",
                         "Deploying in production using Vercel, railway , AWS "
                   ],
-                  "start_date": "2019-05-01",
-                  "end_date": "2020-12-31"
+                  "start_date": "August 2024",
+                  "end_date": "October 2024"
             },
             {
                   "title": "Software Developer Intern",
@@ -44,8 +44,8 @@
                         "Low Level System Designing"
                   
                   ],
-                  "start_date": "2018-06-01",
-                  "end_date": "2018-12-31"
+                  "start_date": "February 2024",
+                  "end_date": "June 2024"
             }
       ]
 ]

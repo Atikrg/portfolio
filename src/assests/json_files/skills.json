@@ -1,0 +1,47 @@
+[
+      {
+            "category": "Frontend",
+            "icon": "CodeIcon",
+            "iconColor": "blue",
+            "skills": [
+                  "React",
+                  "Next.js",
+                  "JavaScript",
+                  "HTML5",
+                  "CSS3",
+                  "Tailwind CSS"
+            ]
+      },
+      {
+            "category": "Backend",
+            "icon": "Server",
+            "iconColor": "green",
+            "skills": [
+                  "Node.js",
+                  "Express",
+                  "MySQL",
+                  "MongoDB"
+            ]
+      },
+      {
+            "category": "Mobile Development",
+            "icon": "WrenchIcon - orange",
+            "skills": [
+                  "React Native",
+                  "Expo",
+                  "Flutter"
+            ]
+      },
+      {
+            "category": "Tools & Platforms",
+            "icon": "WrenchIcon - purple",
+            "skills": [
+                  "Git",
+                  "Docker",
+                  "Firebase",
+                  "Vercel",
+                  "Postman",
+                  "Deployment"
+            ]
+      }
+]
