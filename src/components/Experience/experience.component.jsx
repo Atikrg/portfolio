@@ -30,13 +30,17 @@ export default function Experience() {
                                     <div className="timeline-content">
                                         <div className="experience-header">
                                             <h3>{item.title}</h3>
+                             
                                             <span className="experience-date">
                                                 {moment(item.start_date).format("MMM YYYY")} -{" "}
                                                 {moment(item.end_date).format("MMM YYYY")}
                                             </span>
                                         </div>
                                         <p className="experience-position">
+                                            Company: {item.company}
+                                            <br/>
                                             Position: {item.position}
+
                                         </p>
                                         <p className="experience-description">{item.description}</p>
                                         <p className="experience-skills">

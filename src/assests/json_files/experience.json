@@ -4,6 +4,7 @@
                   "title": "Full Stack Software Developer and Full Stack Mobile Developer",
                   "position": "Software Developer",
                   "description": "Worked on 2+ projects",
+                  "company": "Protovec",
                   "skills": [
                         "React",
                         "Node",
@@ -19,8 +20,9 @@
             },
             {
                   "title": "Software Developer Intern",
-                  "position": "Node.js Developer",
+                  "position": "Intern ",
                   "description": "Created REST APIs and optimized database queries.",
+                  "company": "Protovec",
                   "skills": [
                         "Node.js",
                         "Express",
@@ -33,8 +35,9 @@
                   "end_date": "2020-12-31"
             },
             {
-                  "title": "Internship",
-                  "position": "Software Developer Internship",
+                  "title": "Software Developer Intern",
+                  "position": "Intern",
+                  "company": "Pleximus",
                   "skills": [
                         "Laravel",
                         "Figma",
